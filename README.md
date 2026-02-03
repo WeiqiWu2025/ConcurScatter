@@ -63,8 +63,8 @@ Taking file survey_ConcurScatter_Impact_of_backscatter_channel as an example, th
   [rxSig,~,~] = func_awgn(rxSig,snr(i),'measured');
 - **Demodulation**: The receiver decodes each tag’s data according to the corresponding system design.
 
-# Packet Structure
-The package consists of a funcs folder and executable MATLAB code files (in .m format). The functions in the funcs folder serve as function libraries required to support the execution of the .m files. All .m files can be executed directly in MATLAB R2021a.
+# Repository Structure
+The repository consists of a funcs folder and executable MATLAB code files (in .m format). The functions in the funcs folder serve as function libraries required to support the execution of the .m files. All .m files can be executed directly in MATLAB R2021a.
 - survey_ConcurScatter_Impact_of_PSDU_length.m file corresponds to Fig. 4 in the manuscript.
 - survey_ConcurScatter_Impact_of_WiFi_transceiver_channel.m file corresponds to Fig. 6 in the manuscript.
 - survey_ConcurScatter_Impact_of_backscatter_channel.m file corresponds to Fig. 7 in the manuscript.
