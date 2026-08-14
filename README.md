@@ -45,8 +45,11 @@ Taking file survey_ConcurScatter_Impact_of_backscatter_channel as an example, th
   tagData = [ones(pLen,numTags);tagData];
 - **Tag modulation**: The tag performs the backscatter operation. When bit 1 is transmitted, it introduces a phase of $\pi$; otherwise, no phase is introduced.
   ```
-  for tag_idx1 = 1:numTags
-    bxSig{tag_idx1} = survey_FreeCollision_funcBackscatter(exSig(:,tag_idx1),tagData(:,tag_idx1),1);
+  for tagIdx = 1:numTags
+    bxSig{tagIdx} = exSig(:,tagIdx);
+    bxSig{tagIdx}(801:800+length(tagModulationSignal)) = ...
+    tagModulationSignal(:,tagIdx).*...
+    bxSig{tagIdx}(801:800+length(tagModulationSignal));
   end
 - **Tag-to-receiver link**: The modulated signal then propagates through the tag-to-receiver channel to the receiver. The tag and the receiver are usually separated by a much larger distance, for which a multipath propagation model is more appropriate. Accordingly, we model the tag-to-receiver channel using MATLAB's built-in \emph{TGn Channel Model-B}, which captures the effects of indoor WiFi multipath propagation, CFO, and frequency selectivity.
   ```
