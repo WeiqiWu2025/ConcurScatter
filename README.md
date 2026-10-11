@@ -1,6 +1,6 @@
 # A Survey on Concurrent WiFi Backscatter Communication: Performance Comparison and Future Perspectives
 
-This repository contains the reproduction code for the Paper "Exploiting subcarrier redundancy for concurrent OFDM backscatter communication".
+This repository contains the reproduction code for the Paper "ConcurScatter: Reproduction code for “Exploiting Subcarrier Redundancy for Concurrent OFDM Backscatter Communication".
 
 Developed by Weiqi Wu et al. (weiqiwu@ustc.edu.cn), Copyright © 2025 Weiqi Wu et al.
 
